@@ -1,0 +1,28 @@
+/* ____________________________________Footer____________________________________ */
+
+footer {
+
+    @include grid(1);
+    @include size(100%, none);
+    font-weight: lighter;
+    font-size: 1rem;
+    background-color: $footer-bg;
+    color: rgb(136, 131, 151);
+    opacity: 75%;
+
+    .footer-menu {
+        @include flex(row, none, none);
+        @include position(0px, 0px, none);
+
+        list-style-type: none;
+        a {
+            text-decoration: none;
+        }
+        li {
+            padding:20px 10px 0px 10px;
+            
+        }
+    }
+
+}
+

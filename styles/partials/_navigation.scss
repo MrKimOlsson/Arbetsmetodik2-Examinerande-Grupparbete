@@ -1,0 +1,27 @@
+header {
+
+    nav {
+        background-color: $nav-bg;
+        padding-bottom: 1rem;
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            list-style-type: none;
+            padding-top: 10px;
+    
+            li {
+                a {
+                    color: $light-text;
+                }
+            }
+        }
+    }
+    .nav-logo {
+    
+        height: 2.5rem;
+        padding-right: 100px;
+    }
+}
+
