@@ -12,8 +12,10 @@ html {
 
 body {
     background: $body-bg;
-    font-family: 'Montserrat', sans-serif;
+    // font-family: 'Montserrat', sans-serif;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
     // font-family: Roboto, sans-serif;
+    
 }
 
 
@@ -40,7 +42,6 @@ h5 {
     font-size: .8rem;
 }
 
-p {
-    padding-bottom: 50px;
-}
-
+// p {
+//     margin-bottom: 30px;
+// }

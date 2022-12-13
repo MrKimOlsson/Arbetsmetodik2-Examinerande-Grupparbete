@@ -17,7 +17,7 @@
 .card {
     @include flex(column, center, center); 
     text-align: center;
-    background-color: $light;
+    background-color: $card-color;
     border-radius: 20px;
     box-shadow: 2px 2px 2px #00000051;
     padding: 30px 30px 60px 30px;
