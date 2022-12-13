@@ -35,10 +35,6 @@ h5 {
   font-size: 0.8rem;
 }
 
-p {
-  padding-bottom: 50px;
-}
-
 /* ____________________________________Links____________________________________ */
 main a:link {
   color: rgb(223, 221, 227);
@@ -198,7 +194,7 @@ footer {
   height: none;
   font-weight: lighter;
   font-size: 1rem;
-  background-color: gray;
+  background-color: #f5f5f7;
   color: black;
 }
 footer .footer-menu {
@@ -224,23 +220,96 @@ footer .footer-content {
   letter-spacing: normal;
 }
 footer .footer-content .column {
-  padding: 10px;
+  padding: 25px;
 }
 footer .footer-content h3 {
-  font-size: 1rem;
+  font-size: 0.7rem;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 footer .footer-content li {
   list-style: none;
+  margin-bottom: 0.8em;
 }
 footer .footer-content a {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 0.7rem;
+  font-weight: 500;
   color: rgb(46, 46, 46);
   text-decoration: none;
 }
 footer .footer-content a:hover {
+  text-decoration: underline;
+}
+footer .shop {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: block;
+  border-bottom: 1px solid black;
+}
+footer .shop p {
+  text-align: start;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+footer .shop a {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgb(0, 102, 204);
+  text-decoration: none;
+}
+footer .shop a:hover {
+  text-decoration: underline;
+}
+footer .copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px;
+}
+footer .copyright p {
+  text-align: start;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+footer .copyright a {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgb(46, 46, 46);
+  text-decoration: none;
+  padding-left: 600px;
+}
+footer .copyright a:hover {
+  text-decoration: underline;
+}
+
+.legal-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding-bottom: 30px;
+}
+.legal-links ul li {
+  position: relative;
+  right: 90px;
+  display: inline;
+  list-style: none;
+}
+.legal-links a {
+  margin-right: 7px;
+  padding-right: 7px;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgb(46, 46, 46);
+  text-decoration: none;
+  border-right: 0.5px solid rgb(62, 62, 62);
+}
+.legal-links a:hover {
   text-decoration: underline;
 }
 

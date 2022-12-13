@@ -26,26 +26,88 @@ footer {
         padding-top: 20px;
         letter-spacing: normal;
         .column{
-            padding: 10px;
+            padding: 25px;
         }
         h3{
-            font-size: 1rem;
+            font-size: .7rem;
             padding-top: 10px;
             padding-bottom: 10px;
         }
         li {
         list-style: none;
+        margin-bottom: .8em;
         }
         a{
-            font-size: 1rem;
-            font-weight: 400;
+            font-size: .7rem;
+            font-weight: 500;
             color: rgb(46, 46, 46);
             text-decoration: none;
         }
         a:hover{
             text-decoration: underline;
         }
-    }
-
-}
+     }
+        .shop{
+            width: 1000px;
+            @include flex(row, space-between, center);
+            display: block;
+            border-bottom: 1px solid black;
+            p{
+            text-align: start;
+            font-size: .7rem;
+            font-weight: 400;
+            }
+            a{
+                font-size: .7rem;
+                font-weight: 400;
+                color: rgb(0, 102, 204);
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+        .copyright{
+            @include flex(row, space-between, start);
+            padding: 10px;
+            p{
+            text-align: start;
+            font-size: .7rem;
+            font-weight: 400;
+            }
+            a{
+                font-size: .7rem;
+                font-weight: 400;
+                color: rgb(46, 46, 46);
+                text-decoration: none;
+                padding-left: 600px;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+        }
+        .legal-links{
+            @include flex(row, space-between, start);
+            padding-bottom: 30px;
+            ul li {
+            position: relative;
+            right: 90px;
+            display: inline;
+            list-style: none;
+            }
+            a{
+                margin-right: 7px;
+                padding-right: 7px;
+                margin-top: 10px;
+                font-size: 0.7rem;
+                font-weight: 600;
+                color: rgb(46, 46, 46);
+                text-decoration: none;
+                border-right: .5px solid rgb(62, 62, 62);
+            }
+            a:hover{
+                text-decoration: underline;
+            }   
+        }
 
