@@ -1,58 +1,9 @@
-// IMAGES
 
-// Section Images
-.img-section {
-    border-radius: 50%;
-    padding-bottom: 50%;
-}
-
-// Portfolio Images
-  $widht: 90px;
-  $height:90px;
-  $padding: 10px;
-  $radius:50%;
-  $shape:60%;
-
-// SECTIONS
+// Content
 
 .content{
     @include grid(1);
     width: 70%;
     padding-top: 4rem;
-}
-
-// CONTACT
-.contact{
-    @include grid(2);
-    width: 70%;
-}
-
-// PORTFOLIO
-.portfolio{
-    @include grid(3);
-    width: 70%;
-    color: white;
-
-    .img-one {
-        width: $widht;
-        height: $height;
-        padding: $padding;
-        border-radius: $radius;
-        padding-bottom: $shape;
-    }
-    .img-two {
-        width: $widht;
-        height: $height;
-        padding: $padding;
-        border-radius: $radius;
-        padding-bottom: $shape;
-    }
-    .img-three {
-        width: $widht;
-        height: $height;
-        padding: $padding;
-        border-radius: $radius;
-        padding-bottom: $shape;
-    }
-    
+    text-align: center;
 }

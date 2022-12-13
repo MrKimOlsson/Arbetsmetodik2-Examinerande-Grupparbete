@@ -1,6 +1,8 @@
+/* ____________________________________Colors____________________________________ */
 * {
-  margin: auto;
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -54,13 +56,14 @@ main a:active {
   color: rgb(111, 142, 176);
 }
 
+/* ____________________________________Mixins____________________________________ */ /* ____________________________________Colors____________________________________ */ /* ____________________________________Header & Navigation____________________________________ */
 header nav {
   background-color: black;
   padding-bottom: 1rem;
 }
 header nav .menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   justify-items: center;
   list-style-type: none;
   padding-top: 10px;
@@ -75,39 +78,34 @@ header .nav-logo {
 
 /* ____________________________________Footer____________________________________ */
 footer {
-  display: grid;
-  gap: 0.1rem;
-  grid-template-columns: repeat(1, 1fr);
-  padding-block: 0.1rem;
-  width: 40%;
-  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: none;
   font-weight: lighter;
   font-size: 1rem;
   background-color: gray;
-  color: rgb(136, 131, 151);
+  color: black;
   opacity: 75%;
 }
 footer .footer-menu {
   display: flex;
   flex-direction: row;
-  justify-content: none;
-  align-items: none;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  right: none;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
   list-style-type: none;
 }
 footer .footer-menu a {
   text-decoration: none;
 }
 footer .footer-menu li {
-  padding: 20px 10px 0px 10px;
+  padding: 20px 10px 20px 10px;
 }
 
-/* ____________________________________Card____________________________________ */
+/* ____________________________________Grids____________________________________ */
 .grid-one {
   display: grid;
   gap: 0.1rem;
@@ -135,6 +133,7 @@ footer .footer-menu li {
   margin-inline: auto;
 }
 
+/* ____________________________________Card____________________________________ */
 .card {
   display: flex;
   flex-direction: column;
@@ -166,6 +165,7 @@ footer .footer-menu li {
   font-size: 1.3rem;
 }
 
+/* ____________________________________Mixins____________________________________ */ /* ____________________________________Colors____________________________________ */
 .sections .section-one {
   background-color: white;
   color: black;
@@ -197,11 +197,6 @@ footer .footer-menu li {
   height: 100vh;
 }
 
-.img-section {
-  border-radius: 50%;
-  padding-bottom: 50%;
-}
-
 .content {
   display: grid;
   gap: 0.1rem;
@@ -211,48 +206,7 @@ footer .footer-menu li {
   margin-inline: auto;
   width: 70%;
   padding-top: 4rem;
-}
-
-.contact {
-  display: grid;
-  gap: 0.1rem;
-  grid-template-columns: repeat(2, 1fr);
-  padding-block: 0.1rem;
-  width: 40%;
-  margin-inline: auto;
-  width: 70%;
-}
-
-.portfolio {
-  display: grid;
-  gap: 0.1rem;
-  grid-template-columns: repeat(3, 1fr);
-  padding-block: 0.1rem;
-  width: 40%;
-  margin-inline: auto;
-  width: 70%;
-  color: white;
-}
-.portfolio .img-one {
-  width: 90px;
-  height: 90px;
-  padding: 10px;
-  border-radius: 50%;
-  padding-bottom: 60%;
-}
-.portfolio .img-two {
-  width: 90px;
-  height: 90px;
-  padding: 10px;
-  border-radius: 50%;
-  padding-bottom: 60%;
-}
-.portfolio .img-three {
-  width: 90px;
-  height: 90px;
-  padding: 10px;
-  border-radius: 50%;
-  padding-bottom: 60%;
+  text-align: center;
 }
 
 .d-none {
