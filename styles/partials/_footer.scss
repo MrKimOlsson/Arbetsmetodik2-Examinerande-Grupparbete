@@ -1,0 +1,26 @@
+/* ____________________________________Footer____________________________________ */
+
+footer {
+    @include flex(column, center, center);
+    @include size(100%, none);
+    font-weight: lighter;
+    font-size: 1rem;
+    background-color: $footer-bg;
+    color: $footer-text;
+
+    .footer-menu {
+        @include flex(row, space-around, center);
+        text-align: center;
+
+        list-style-type: none;
+        a {
+            text-decoration: none;
+        }
+        li {
+            padding:20px 10px 20px 10px;
+            
+        }
+    }
+
+}
+

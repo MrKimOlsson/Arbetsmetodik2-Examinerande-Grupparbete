@@ -1,0 +1,50 @@
+@import "mixins";
+@import "colors";
+
+$height-one: 100vh;
+$height-two: 100vh;
+$height-three: 100vh;
+$height-four: 100vh;
+$height-five: 100vh;
+
+$width: 100%;
+$height: 100vh;
+
+$border-top: solid 1px #000000c8;
+$border-bottom: solid 1px #ffffff0c;
+
+
+.sections {
+
+    .section-one{
+        background-color: $bg-color-one;   
+        color: $text-color-one;  
+        width:$width;
+        height:$height;
+    }
+    .section-two{
+        background-color: $bg-color-two;  
+        color: $text-color-two;      
+        width:$width;
+        height:$height-two;
+    }
+    .section-three{
+        background-color: $bg-color-three;
+        color: $text-color-three;
+        width:$width;
+        height:$height-three;
+    }
+    .section-four{
+        background-color: $bg-color-four;
+        color: $text-color-four;
+        width:$width;
+        height:$height-four;
+    }
+    .section-five{
+        background-color: $bg-color-five;
+        color: $text-color-five;
+        width:$width;
+        height:$height-five;
+
+    } 
+}

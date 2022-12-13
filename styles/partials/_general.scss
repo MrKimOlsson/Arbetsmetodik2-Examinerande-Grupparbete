@@ -1,0 +1,46 @@
+@import "colors";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $body-bg;
+    font-family: 'Montserrat', sans-serif;
+    // font-family: Roboto, sans-serif;
+}
+
+
+/* ____________________________________Basic tags____________________________________ */
+
+h1 {
+    font-size: 2rem;
+
+}
+
+h2 {
+    font-size: .8
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: .8rem;
+}
+
+p {
+    padding-bottom: 50px;
+}
+
