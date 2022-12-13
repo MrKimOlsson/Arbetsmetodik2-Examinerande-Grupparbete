@@ -21,6 +21,31 @@ footer {
             
         }
     }
+    .footer-content {
+        @include flex (row, space-between, none);
+        padding-top: 20px;
+        letter-spacing: normal;
+        .column{
+            padding: 10px;
+        }
+        h3{
+            font-size: 1rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        li {
+        list-style: none;
+        }
+        a{
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgb(46, 46, 46);
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
 
 }
 
