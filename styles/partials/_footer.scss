@@ -23,10 +23,11 @@ footer {
     }
     .footer-content {
         @include flex (row, space-between, none);
-        padding-top: 20px;
+        padding-top: 10px;
         letter-spacing: normal;
         .column{
-            padding: 25px;
+            padding-left: 25px;
+            padding-right: 25px;
         }
         h3{
             font-size: .7rem;
@@ -35,7 +36,7 @@ footer {
         }
         li {
         list-style: none;
-        margin-bottom: .8em;
+        margin-bottom: .3em;
         }
         a{
             font-size: .7rem;
@@ -54,11 +55,11 @@ footer {
             border-bottom: 1px solid black;
             p{
             text-align: start;
-            font-size: .7rem;
+            font-size: .8rem;
             font-weight: 400;
             }
             a{
-                font-size: .7rem;
+                font-size: .8rem;
                 font-weight: 400;
                 color: rgb(0, 102, 204);
                 text-decoration: none;
@@ -72,7 +73,7 @@ footer {
             padding: 10px;
             p{
             text-align: start;
-            font-size: .7rem;
+            font-size: .8rem;
             font-weight: 400;
             }
             a{
@@ -92,7 +93,7 @@ footer {
             padding-bottom: 30px;
             ul li {
             position: relative;
-            right: 90px;
+            right: 110px;
             display: inline;
             list-style: none;
             }
