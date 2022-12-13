@@ -49,3 +49,39 @@
     bottom: $z;
 }
 
+// Media Query
+$fold-width: 280px;
+$special-width: 390px;
+$tablet-width: 900px;
+$desktop-width: 1350px;
+
+@mixin fold {
+    @media (max-width: #{$fold-width}) {
+      @content;
+    }
+}
+
+@mixin special {
+    @media (max-width: #{$special-width}) {
+      @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+}
+
+@mixin landscape {
+    @media (orientation: landscape) {
+        @content;
+        
+    }
+}

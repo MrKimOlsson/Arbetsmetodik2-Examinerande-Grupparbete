@@ -1,38 +1,33 @@
-const btnLightMode = document.querySelector('#btn-light-mode');
-const btnDarkMode = document.querySelector('#btn-dark-mode');
+// MOBILE NAVIGATION
 
-let dark = true;
+const menu = document.querySelector(".menuMobile");
+const navbar = document.querySelector(".navbar");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger = document.querySelector(".hamburger");
 
-if(dark){
-    btnDarkMode.classList.add('d-none');
-    btnLightMode.classList.remove('d-none'); 
-} else{
-    btnLightMode.classList.add('d-none');
-    btnDarkMode.classList.remove('d-none');   
+
+function toggleMenu() {
+
+  if (navbar.classList.contains("showMenu")) {
+    navbar.classList.toggle("change");
+    navbar.classList.toggle("showMenu");
+
+  } else {
+    navbar.classList.toggle("change");
+    navbar.classList.toggle("showMenu");
+  }
 }
 
-const lightModeFunction = () => {
-    let element = document.body;
-    element.classList.toggle('toggleLight');
-    btnDarkMode.classList.remove('d-none');
-    btnLightMode.classList.add('d-none');
-    dark = false;
-}
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
 
-const darkModeFunction = () => {
-    let element = document.body;
-    element.classList.toggle('toggleLight');
-    btnDarkMode.classList.add('d-none');
-    btnLightMode.classList.remove('d-none');
-    dark = true;
-}
+hamburger.addEventListener("click", toggleMenu);
 
-btnLightMode.addEventListener('click', (e) => {
-    lightModeFunction();
 
-})
 
-btnDarkMode.addEventListener('click', (e) => {
-    darkModeFunction();
-
-})
+  function changeHamburger(x) {
+    x.classList.toggle("change");
+  }

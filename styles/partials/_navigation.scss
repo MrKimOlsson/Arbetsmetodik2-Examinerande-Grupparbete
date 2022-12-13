@@ -1,29 +1,144 @@
 /* ____________________________________Header & Navigation____________________________________ */
 
-header {
-
-    nav {
-        background-color: $nav-bg;
-        padding-bottom: 1rem;
-
-        .menu {
-            display: flex;
-            justify-content: space-around;
-            justify-items: center;
-            list-style-type: none;
-            padding-top: 10px;
+.navbar {
+    @include flex(row, space-around, center);
+    overflow: hidden;
+    border-bottom: solid 1px $nav-border;
+    width: 100%;
+    height: 3rem;
+    background-color: #000000;
+    z-index: 1;
     
-            li {
-                a {
-                    color: $light-text;
-                }
+    .menu-desktop {
+      display: none;
+  
+      @include desktop {
+        @include grid(5);
+        gap: 2rem;
+        list-style-type: none;
+        position: absolute;
+        right: 200px;
+  
+        li {
+  
+          a {
+            color: $light-text;  
+            
+            &:hover {
+              color: $menu-hover;
+              @include position(.1rem, none, none);
             }
+  
+            &:active {
+              @include position(.2rem, none, none);
+              color:rgb(146, 146, 146);
+            }
+          }
         }
+        
+        .highlighted {
+          a{
+              @include position(.1rem, none, none);
+              color: $menu-hover;
+              text-decoration: underline;
+          }       
+        }
+      }
     }
-    .nav-logo {
+  
+    .menuMobile {
+      position: fixed;
+      transform: translateY(-100%);
+      transition: transform 0.2s;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+      background: black;
+      color: white;
+      list-style: none;
+      padding-top: 5rem; 
+  
+      .menuItem {
+        display: block;
+        margin: 2rem 4rem;
+        font-size: 1.8rem;
+        color: white;
+        text-decoration: none;
+        border-bottom: solid 3px #ffffff;
+  
+        &:hover {
+          @include position(.1rem, none, none);
+        }
+      }
+    }
+  
+    .hamburger {
+      z-index: 100;
+      cursor: pointer;
+  
+      .bar1, .bar2, .bar3 {
+        width: 30px;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+        transition: all .6s ease;
+  
+        @include desktop{
+          display: none;
+        } 
+      }
+  
+      &:hover {
+  
+        .bar1 {
+          // @include position(none, .2rem, none);
+          transform: rotate(180deg);
+        }
+        .bar2 {
+          // @include position(none, .2rem, none);
+          transform: rotate(16deg);
+        }
+        .bar3 {
+          // @include position(none, .2rem, none);
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+  
+  // Change hamburger on click
+  .change {
+  
+    .hamburger {
+      .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      .bar2 {opacity: 0;}
     
-        height: 2.5rem;
-        padding-right: 100px;
+      .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
     }
-}
-
+  }
+  
+  // Show menu
+  .showMenu {
+  
+    .menuMobile{
+      transform: translateY(0);
+    }
+  }
+  
+  // Footer navigation
+  .footer-nav {
+  display: flex;
+  flex-direction: column;
+  
+    ul{
+      padding: 1rem;
+    }
+  
+  }
