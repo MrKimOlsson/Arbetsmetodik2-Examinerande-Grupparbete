@@ -7,7 +7,6 @@ footer {
     font-size: 1rem;
     background-color: $footer-bg;
     color: $footer-text;
-    opacity: 75%;
 
     .footer-menu {
         @include flex(row, space-around, center);
