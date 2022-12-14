@@ -11,9 +11,10 @@
 // Grid
 @mixin grid($columns) {
     display: grid;
-    gap: .1rem;
+    gap: 1%;
+    column-gap: 1%;
     grid-template-columns:
-        repeat($columns, 1fr);
+    repeat($columns, 1fr);
     padding-block: .1rem;
     width: min(85%, 40%);
     margin-inline: auto;

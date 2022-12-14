@@ -4,7 +4,7 @@
 $height-one: 100%;
 $height-two: 100vh;
 $height-three: 100vh;
-$height-four: 100vh;
+$height-four: 100%;
 $height-five: 100vh;
 
 $width: 100%;
@@ -15,6 +15,11 @@ $border-bottom: solid 1px #ffffff0c;
 
 
 .sections {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .section-one{
         // background-color: $bg-color-one;   
@@ -150,30 +155,64 @@ $border-bottom: solid 1px #ffffff0c;
         background-color: $bg-color-four;
         // background-color: blue;
         color: $text-color-four;
-        width:$width;
+        // width:$width;
         height:$height-four;
+        
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+
+        width:100%;
+        // margin-left: 1%;
+        // margin-right: 1%;
+
         .grid-container{
-            // display: flex;
-            // border: solid pink;
-            // height: 100%;
-            // width: 100%;
-            // flex-direction: column;
-            // column-count: 2;
-            // display: grid;
-            // grid-template-columns: repeat(5, 1fr);
-            // grid-template-rows: repeat(5, 1fr);
-            @include grid(2);
-            grid-column-gap: 10px;
-            grid-row-gap: 10px;
+
+            @include grid(1);
+            height: 100%;
+            width: 96%;
+            margin-left: 2%;
+            margin-right: 2%;
+
+            @include tablet {
+                @include grid(2);
+                height: 100%;
+                width: 96%;
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+
+            @include desktop {
+                @include grid(2);
+                height: 100%;
+                width: 96%;
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+
 
             .grid-item{
-                height: 100%;
-                width: 100%;
+
 
                 .grid-img{
-                    height: 100%;
-                    width: 100%;
+                    height: 20rem;
+                    width: 20rem;
                 }
+
+            }
+
+            .one, .two, .three, .five {
+                background-color: black;
+            }
+
+            .four {
+                background-color: #fbfbfd;
+            }
+
+            .six {
+                // background-color: #f5f5f7;
+                background-color: white;
             }
         }
     }
