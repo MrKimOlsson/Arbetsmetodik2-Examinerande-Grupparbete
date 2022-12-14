@@ -211,37 +211,39 @@ footer .footer-menu a {
 footer .footer-menu li {
   padding: 20px 10px 20px 10px;
 }
-footer .footer-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: none;
-  padding-top: 10px;
-  letter-spacing: normal;
+@media (min-width: 1350px) {
+  footer .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: none;
+    padding-top: 10px;
+    letter-spacing: normal;
+  }
+  footer .footer-content .column {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  footer .footer-content h3 {
+    font-size: 0.7rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  footer .footer-content li {
+    list-style: none;
+    margin-bottom: 0.3em;
+  }
+  footer .footer-content a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+  }
+  footer .footer-content a:hover {
+    text-decoration: underline;
+  }
 }
-footer .footer-content .column {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-footer .footer-content h3 {
-  font-size: 0.7rem;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-footer .footer-content li {
-  list-style: none;
-  margin-bottom: 0.3em;
-}
-footer .footer-content a {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: rgb(46, 46, 46);
-  text-decoration: none;
-}
-footer .footer-content a:hover {
-  text-decoration: underline;
-}
-footer .shop {
+footer .footer-content .shop {
   width: 1000px;
   display: flex;
   flex-direction: row;
@@ -250,57 +252,56 @@ footer .shop {
   display: block;
   border-bottom: 1px solid black;
 }
-footer .shop p {
+footer .footer-content .shop p {
   text-align: start;
   font-size: 0.8rem;
   font-weight: 400;
 }
-footer .shop a {
+footer .footer-content .shop a {
   font-size: 0.8rem;
   font-weight: 400;
   color: rgb(0, 102, 204);
   text-decoration: none;
 }
-footer .shop a:hover {
+footer .footer-content .shop a:hover {
   text-decoration: underline;
 }
-footer .copyright {
+footer .footer-content .copyright {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
   padding: 10px;
 }
-footer .copyright p {
+footer .footer-content .copyright p {
   text-align: start;
   font-size: 0.8rem;
   font-weight: 400;
 }
-footer .copyright a {
+footer .footer-content .copyright a {
   font-size: 0.7rem;
   font-weight: 400;
   color: rgb(46, 46, 46);
   text-decoration: none;
   padding-left: 600px;
 }
-footer .copyright a:hover {
+footer .footer-content .copyright a:hover {
   text-decoration: underline;
 }
-
-.legal-links {
+footer .legal-links {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
   padding-bottom: 30px;
 }
-.legal-links ul li {
+footer .legal-links ul li {
   position: relative;
   right: 110px;
   display: inline;
   list-style: none;
 }
-.legal-links a {
+footer .legal-links a {
   margin-right: 7px;
   padding-right: 7px;
   margin-top: 10px;
@@ -310,8 +311,46 @@ footer .copyright a:hover {
   text-decoration: none;
   border-right: 0.5px solid rgb(62, 62, 62);
 }
-.legal-links a:hover {
+footer .legal-links a:hover {
   text-decoration: underline;
+}
+@media (min-width: 1350px) {
+  footer .footer-mobile {
+    display: none;
+  }
+}
+
+.footer-content {
+  display: none;
+}
+
+.footer-mobile .accordion {
+  display: inline-block;
+  background-color: transparent;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.footer-mobile .active, .footer-mobile .accordion:hover {
+  background-color: #ccc;
+}
+.footer-mobile .panel {
+  padding: 0 18px;
+  width: 100%;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+.footer-mobile li, .footer-mobile a {
+  list-style: none;
+  text-decoration: none;
+  font-weight: 300;
+  color: rgb(24, 24, 24);
 }
 
 /* ____________________________________Grids____________________________________ */

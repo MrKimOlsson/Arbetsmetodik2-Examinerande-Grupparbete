@@ -1,5 +1,6 @@
 /* ____________________________________Footer____________________________________ */
 
+//Footer Desktop
 footer {
     @include flex(column, center, center);
     @include size(100%, none);
@@ -22,6 +23,7 @@ footer {
         }
     }
     .footer-content {
+        @include desktop{
         @include flex (row, space-between, none);
         padding-top: 10px;
         letter-spacing: normal;
@@ -47,7 +49,7 @@ footer {
         a:hover{
             text-decoration: underline;
         }
-     }
+     } 
         .shop{
             width: 1000px;
             @include flex(row, space-between, center);
@@ -109,6 +111,52 @@ footer {
             }
             a:hover{
                 text-decoration: underline;
-            }   
+            }
+    }
+    .footer-mobile{
+        @include desktop{
+            display: none;
         }
+    }
+}     
+//Footer - Mobil
+    // @include tablet{
+        .footer-content{
+        display: none;
+        }
+    
+    .footer-mobile {
+        .accordion {
+            display: inline-block;
+            background-color: transparent;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+          }
+        .active, .accordion:hover {
+            background-color: #ccc;
+          }
+        .panel {
+            padding: 0 18px;
+            width: 100%;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+          }
+    li, a{
+        list-style: none; 
+        text-decoration: none;
+        font-weight: 300;
+        color: rgb(24, 24, 24);
+    }
 
+}
+
+// }    
+
+        // }
