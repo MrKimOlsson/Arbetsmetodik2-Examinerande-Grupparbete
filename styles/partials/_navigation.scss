@@ -2,12 +2,18 @@
 
 header {
 
+    // The navbar
     .navbar {
+        position: fixed;
         overflow: hidden;
         width: 100%;
         height: 3rem;
         z-index: 2;
         caret-color: transparent;
+
+        .h1-apple {
+            font-size: 0;
+        }
 
         .menu-logo {
             width: 1.95rem;
@@ -19,6 +25,7 @@ header {
             color: white;
         }
 
+        // Menu - Desktop version
         .menu-desktop {
             display: none;
             position: absolute;
@@ -53,9 +60,9 @@ header {
             }
         }
 
-
+        // Menu - Mobile version
         .menu-mobile {
-            @include flex(row, space-around, center);
+            @include flex(row, space-between, center);
             position: absolute;
             top: 0;
             width: 100%;
@@ -64,11 +71,12 @@ header {
             opacity: 87%;
             list-style-type: none;
             z-index: 3;
+            padding-left: 1rem;
+            padding-right: 1rem;
 
             .mobile-logo {
-                width: 1.95rem;
-                height: 1.95rem;
-                padding-top: .4rem;
+                width: 1.563rem;
+                height: 1.563rem;
 
                 @include desktop{
                     display: none;
@@ -77,11 +85,13 @@ header {
     
             .mobile-cart {
                 list-style-type: none;
+                padding-bottom: .4rem;
                 @include desktop{
                     display: none;
                 } 
             }
-    
+            
+            // hamburger menu
             .hamburger {
                 z-index: 3;
                 cursor: pointer;
@@ -116,7 +126,7 @@ header {
         .menuMobile {
             position: fixed;
             transform: translateY(-100%);
-            transition: transform 0.2s;
+            transition: transform 1s;
             display: block;
             top: 0;
             left: 0;
@@ -132,6 +142,17 @@ header {
                 display: none;
             } 
 
+            .hidden-search {
+                width: 85%;
+                height: 3rem;
+                border: none;
+                border-radius: 1rem;
+                background-color: $hidden-searchfield;
+                padding-bottom: 1rem;
+                margin: .8rem 3rem;
+            }
+
+            // Links in the hidden dropdown menu
             .menuItem {
                 display: block;
                 margin: .8rem 3rem;

@@ -21,9 +21,6 @@
    <header>
     <nav class="navbar">
 
-        <!-- Logo -->
-        <!-- <a href="/index.html" class="active"><img class="menu-logo" src="/img/apple-logo.svg" alt="logo image"></a> -->
-
         <!-- Mobile menu -->
         <div class="menu-mobile">
 
@@ -41,6 +38,7 @@
 
         <!-- Hidden menu -->
         <menu class="menuMobile">
+            <input type="text" id="hiddenSearch" class="hidden-search">
             <li><a class="menuItem" href="/butik.html">Butik</a></li>
             <li><a class="menuItem" href="/mac.html">Mac</a></li>
             <li><a class="menuItem" href="/ipad.html">iPad</a></li>
@@ -55,7 +53,8 @@
            
         <!-- Desktop menu -->
         <menu class="menu-desktop">
-            <li><a href="/index.html"><img class="menu-logo" src="/img/apple-logo.svg" alt="logo image"></a></li>
+            <h1 class="h1-apple">Apple</h1>
+            <li><a href="/index.html"><img class="menu-logo" src="/img/apple-logo.svg" alt="Apple logo image"></a></li>
             <li><a href="/butik.html">Butik</a></li>
             <li><a href="/mac.html">Mac</a></li>
             <li><a href="/ipad.html">iPad</a></li>
@@ -77,46 +76,73 @@
 
         <section class="sections">
             <section class="section-one" id="section-one">
-                <div class="content">
-                        <h2>Section one</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis inventore, 
-                            neque illum ducimus quas architecto harum. Aut,
-                             perferendis quos inventore quisquam quam pariatur atque blanditiis, 
-                             voluptatum, maxime modi neque magnam!</p>                       
+                <div class="img-wrap-one">
+                    <div class="content">
+                            <h2 class="headline">Iphone 14</h2>
+                            <h3 class="subhead">Stor och större</h3>
+                            <div class="link">
+                                <a href="">Läs mer</a>      
+                                <a href="">Köp</a>
+                            </div>                 
+                    </div>
+                        <img class="img-one" src="/img/Apple Bild (1).png" alt="iphone 14">
+                    </div>
                 </div>
             </section>
 
             <section class="section-two" id="section-two">
+                <div class="img-wrap-two">
                 <div class="content">
-                    <h2>Section two</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis inventore, 
-                            neque illum ducimus quas architecto harum. Aut,
-                             perferendis quos inventore quisquam quam pariatur atque blanditiis, 
-                             voluptatum, maxime modi neque magnam!</p>                       
+                    <img class="img-two" src="/img/Apple Bild (2).png" alt="apple julklapp">
+                    <h2 class="headline">Sista chansen för wow.</h2>
+                        <h3 class="subhead">Sista minuten-klappar som varar länge.</h3>                       
+                        <div class="link">
+                            <a href="">Visa julklappstipsen</a>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="section-three" id="section-three">
+                <div class="img-wrap-three">
                 <div class="content">
-                    <h2>Section three</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis inventore, 
-                            neque illum ducimus quas architecto harum. Aut,
-                             perferendis quos inventore quisquam quam pariatur atque blanditiis, 
-                             voluptatum, maxime modi neque magnam!</p>                       
+                    <img class="img-three" src="/img/Apple Bild (3).png" alt="ipad">
+                    <div class="column-text">
+                    <h2 class="headline">ipad</h2>
+                    <h3 class="subhead">Lekfull. Ritsugen. Magisk.</h3>
+                    <div class="link">
+                        <a href="">Läs mer</a>      
+                        <a href="">Köp</a>
+                    </div>
+                    </div>    
+                </div>            
                 </div>
             </section>
 
             <section class="section-four" id="section-four">
-                <div class="content">
-                    <h2>Section four</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis inventore, 
-                            neque illum ducimus quas architecto harum. Aut,
-                             perferendis quos inventore quisquam quam pariatur atque blanditiis, 
-                             voluptatum, maxime modi neque magnam!</p>                       
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img class="grid-img" src="/img/Grid (1).jpg" alt="">
+                    </div>
+                    <div class="grid-item">
+                        <img class="grid-img" src="/img/Grid (2).jpg" alt="">
+                    </div>
+                    <div class="grid-item">
+                        <img class="grid-img" src="/img/Grid (3).jpg" alt="">
+                    </div>
+                    <div class="grid-item">
+                        <img class="grid-img" src="/img/Grid (4).jpg" alt="">
+                    </div>
+                    <div class="grid-item">
+                        <img class="grid-img" src="/img/Grid (5).jpg" alt="">
+                    </div>
+                    <div class="grid-item">
+                        <img class="grid-img" src="/img/Grid (6).jpg" alt="">
+                    </div>
                 </div>
             </section>
 
-            <section class="section-five" id="section-five">
+            <!-- <section class="section-five" id="section-five">
                 <div class="content">
                     <h2>Section five</h2>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis inventore, 
@@ -124,10 +150,11 @@
                              perferendis quos inventore quisquam quam pariatur atque blanditiis, 
                              voluptatum, maxime modi neque magnam!</p>                       
                 </div>
-            </section>
+            </section> -->
 
 
         </section>
+        </main>
 
         <!-- FOOTER -->
         <footer>  
@@ -238,10 +265,7 @@
                     <li> <a href="#">Juridisk information</a></li>
                     <li> <a href="#">Sajtkarta</a></li>
                 </ul>
-            </div>
-            
-            <!-- <p><i>Coded by Kim Olsson 2022 - for the fun of creativity</i></p>  -->
-                  
+            </div>                  
         </footer>
     
         <!-- JavaScript -->

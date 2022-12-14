@@ -54,11 +54,15 @@ main a:active {
 
 /* ____________________________________Mixins____________________________________ */ /* ____________________________________Colors____________________________________ */ /* ____________________________________Header & Navigation____________________________________ */
 header .navbar {
+  position: fixed;
   overflow: hidden;
   width: 100%;
   height: 3rem;
   z-index: 2;
   caret-color: transparent;
+}
+header .navbar .h1-apple {
+  font-size: 0;
 }
 header .navbar .menu-logo {
   width: 1.95rem;
@@ -102,7 +106,7 @@ header .navbar .menu-desktop {
 header .navbar .menu-mobile {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: absolute;
   top: 0;
@@ -112,11 +116,12 @@ header .navbar .menu-mobile {
   opacity: 87%;
   list-style-type: none;
   z-index: 3;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 header .navbar .menu-mobile .mobile-logo {
-  width: 1.95rem;
-  height: 1.95rem;
-  padding-top: 0.4rem;
+  width: 1.563rem;
+  height: 1.563rem;
 }
 @media (min-width: 1350px) {
   header .navbar .menu-mobile .mobile-logo {
@@ -125,6 +130,7 @@ header .navbar .menu-mobile .mobile-logo {
 }
 header .navbar .menu-mobile .mobile-cart {
   list-style-type: none;
+  padding-bottom: 0.4rem;
 }
 @media (min-width: 1350px) {
   header .navbar .menu-mobile .mobile-cart {
@@ -158,7 +164,7 @@ header .navbar .menu-mobile .hamburger:hover .bar2 {
 header .navbar .menuMobile {
   position: fixed;
   transform: translateY(-100%);
-  transition: transform 0.2s;
+  transition: transform 1s;
   display: block;
   top: 0;
   left: 0;
@@ -174,6 +180,15 @@ header .navbar .menuMobile {
   header .navbar .menuMobile {
     display: none;
   }
+}
+header .navbar .menuMobile .hidden-search {
+  width: 85%;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #1a1a1a;
+  padding-bottom: 1rem;
+  margin: 0.8rem 3rem;
 }
 header .navbar .menuMobile .menuItem {
   display: block;
@@ -523,28 +538,134 @@ footer .copyright a:hover {
 
 /* ____________________________________Mixins____________________________________ */ /* ____________________________________Colors____________________________________ */
 .sections .section-one {
+  background-color: rgb(251, 251, 253);
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+.sections .section-one .img-wrap-one {
+  z-index: 1;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.sections .section-one .img-wrap-one .content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  flex-direction: column;
+}
+.sections .section-one .img-wrap-one .content .headline {
+  font-size: 46px;
+}
+.sections .section-one .img-wrap-one .content .subhead {
+  font-size: 24px;
+}
+.sections .section-one .img-wrap-one .content .link {
+  font-size: 21px;
+  margin-top: 0.5em;
+}
+.sections .section-one .img-wrap-one .img-one {
+  display: flex;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.sections .section-two {
+  background-color: rgb(1, 1, 42);
+  color: white;
+  width: 100%;
+  height: 100vh;
+}
+.sections .section-two .img-wrap-two {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.sections .section-two .img-wrap-two .content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  flex-direction: column;
+}
+.sections .section-two .img-wrap-two .content .headline {
+  font-size: 46px;
+}
+.sections .section-two .img-wrap-two .content .subhead {
+  font-size: 24px;
+}
+.sections .section-two .img-wrap-two .content .link {
+  font-size: 21px;
+  margin-top: 0.5em;
+}
+.sections .section-two .img-two {
+  display: flex;
+  height: 500px;
+  width: 500px;
+  margin: 1rem;
+  align-self: center;
+}
+.sections .section-three {
   background-color: white;
   color: black;
   width: 100%;
   height: 100vh;
 }
-.sections .section-two {
-  background-color: black;
-  color: white;
+.sections .section-three .img-wrap-three {
+  z-index: 1;
+  position: absolute;
   width: 100%;
-  height: 100vh;
+  justify-content: center;
+  display: flex;
 }
-.sections .section-three {
-  background-color: lightgray;
-  color: black;
-  width: 100%;
-  height: 100vh;
+.sections .section-three .img-wrap-three .content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  flex-direction: row;
+}
+.sections .section-three .img-wrap-three .content .column-text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.sections .section-three .img-wrap-three .content .headline {
+  font-size: 46px;
+}
+.sections .section-three .img-wrap-three .content .subhead {
+  font-size: 24px;
+}
+.sections .section-three .img-wrap-three .content .link {
+  font-size: 21px;
+  margin-top: 0.5em;
+}
+.sections .section-three .img-three {
+  display: flex;
+  height: 40rem;
+  width: 40rem;
+  margin: 1rem;
+  align-self: center;
 }
 .sections .section-four {
   background-color: white;
   color: black;
   width: 100%;
   height: 100vh;
+}
+.sections .section-four .grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.sections .section-four .grid-container .grid-item .grid-img {
+  height: 20rem;
+  width: 20rem;
 }
 .sections .section-five {
   background-color: lightgray;
