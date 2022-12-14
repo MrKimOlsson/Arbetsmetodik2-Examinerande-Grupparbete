@@ -278,28 +278,136 @@ footer .footer-menu li {
 
 /* ____________________________________Mixins____________________________________ */ /* ____________________________________Colors____________________________________ */
 .sections .section-one {
+  background-color: rgb(251, 251, 253);
+  color: black;
+  width: 100%;
+  height: 85vh;
+}
+.sections .section-one .img-wrap-one {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.sections .section-one .img-wrap-one .content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  flex-direction: column;
+}
+.sections .section-one .img-wrap-one .content .headline {
+  font-size: 46px;
+}
+.sections .section-one .img-wrap-one .content .subhead {
+  font-size: 24px;
+}
+.sections .section-one .img-wrap-one .content .link {
+  font-size: 21px;
+  margin-top: 0.5em;
+}
+.sections .section-one .img-one {
+  display: flex;
+  margin: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.sections .section-two {
+  background-color: rgb(1, 1, 42);
+  color: white;
+  width: 100%;
+  height: 100vh;
+}
+.sections .section-two .img-wrap-two {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.sections .section-two .img-wrap-two .content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  flex-direction: column;
+}
+.sections .section-two .img-wrap-two .content .headline {
+  font-size: 46px;
+}
+.sections .section-two .img-wrap-two .content .subhead {
+  font-size: 24px;
+}
+.sections .section-two .img-wrap-two .content .link {
+  font-size: 21px;
+  margin-top: 0.5em;
+}
+.sections .section-two .img-two {
+  display: flex;
+  height: 500px;
+  width: 500px;
+  margin: 1rem;
+  align-self: center;
+}
+.sections .section-three {
   background-color: white;
   color: black;
   width: 100%;
   height: 100vh;
 }
-.sections .section-two {
-  background-color: black;
-  color: white;
+.sections .section-three .img-wrap-three {
+  z-index: 1;
+  position: absolute;
   width: 100%;
-  height: 100vh;
+  justify-content: center;
+  display: flex;
 }
-.sections .section-three {
-  background-color: lightgray;
-  color: black;
-  width: 100%;
-  height: 100vh;
+.sections .section-three .img-wrap-three .content {
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  flex-direction: row;
+}
+.sections .section-three .img-wrap-three .content .column-text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.sections .section-three .img-wrap-three .content .headline {
+  font-size: 46px;
+}
+.sections .section-three .img-wrap-three .content .subhead {
+  font-size: 24px;
+}
+.sections .section-three .img-wrap-three .content .link {
+  font-size: 21px;
+  margin-top: 0.5em;
+}
+.sections .section-three .img-three {
+  display: flex;
+  height: 40rem;
+  width: 40rem;
+  margin: 1rem;
+  align-self: center;
 }
 .sections .section-four {
   background-color: white;
   color: black;
   width: 100%;
   height: 100vh;
+}
+.sections .section-four .grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.sections .section-four .grid-container .grid-item .grid-img {
+  height: 20rem;
+  width: 20rem;
 }
 .sections .section-five {
   background-color: lightgray;
