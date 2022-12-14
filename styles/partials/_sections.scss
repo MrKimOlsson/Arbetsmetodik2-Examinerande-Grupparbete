@@ -1,7 +1,7 @@
 @import "mixins";
 @import "colors";
 
-$height-one: 100vh;
+$height-one: 100%;
 $height-two: 100vh;
 $height-three: 100vh;
 $height-four: 100vh;
@@ -21,13 +21,10 @@ $border-bottom: solid 1px #ffffff0c;
         background-color: rgba(251, 251, 253, 1);
         color: $text-color-one;  
         width:$width;
-        // height:$height;
-        height: 85vh;
+        height:$height-one;
 
         .img-wrap-one{
             z-index: 1;
-            position: absolute;
-            // border: solid red;
             width: 100%;
             justify-content: center;
             display: flex;
@@ -47,17 +44,15 @@ $border-bottom: solid 1px #ffffff0c;
                 .link {
                     font-size: 21px;
                     margin-top: 0.5em;
-
                 }
             }
-        }
-        .img-one{
-            display: flex;
-            // border: solid blue;
-            margin: 1rem;
-            object-fit: contain;
-        }
+            .img-one{
+                display: flex;
+                object-fit: contain;
+            }
+        }  
     }
+
     .section-two{
         // background-color: $bg-color-two;
         background-color: rgba(1, 1, 42, 1);  

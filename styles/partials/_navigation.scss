@@ -1,144 +1,233 @@
 /* ____________________________________Header & Navigation____________________________________ */
 
-.navbar {
-    @include flex(row, space-around, center);
-    overflow: hidden;
-    border-bottom: solid 1px $nav-border;
-    width: 100%;
-    height: 3rem;
-    background-color: #000000;
-    z-index: 1;
+header {
+
+    // The navbar
+    .navbar {
+        position: fixed;
+        overflow: hidden;
+        width: 100%;
+        height: 3rem;
+        z-index: 2;
+        caret-color: transparent;
+
+        .h1-apple {
+            font-size: 0;
+        }
+
+        .menu-logo {
+            width: 1.95rem;
+            height: 1.95rem;
+            padding-top: .4rem;
+        }
+
+        .fa-solid {
+            color: white;
+        }
+
+        // Menu - Desktop version
+        .menu-desktop {
+            display: none;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 3rem;
+            z-index: 3;
+
+            @include desktop {
+                @include flex (row, center, center);
+                gap: 3rem;
+                list-style-type: none;
+                padding-bottom: .3rem;
+
+                li {
+
+                    a {
+                        color: $menu-text;
+                        font-size: .7rem;
+                        font-weight: lighter;
+                        text-decoration: none;
+                        
+                        &:hover {
+                        color: $menu-hover;
+                        }
+
+                        &:active {
+                        color:rgb(146, 146, 146);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Menu - Mobile version
+        .menu-mobile {
+            @include flex(row, space-between, center);
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 3rem;
+            background-color: $nav-bg;
+            opacity: 87%;
+            list-style-type: none;
+            z-index: 3;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .mobile-logo {
+                width: 1.563rem;
+                height: 1.563rem;
+
+                @include desktop{
+                    display: none;
+                } 
+            }
     
-    .menu-desktop {
-      display: none;
-  
-      @include desktop {
-        @include grid(5);
-        gap: 2rem;
-        list-style-type: none;
-        position: absolute;
-        right: 200px;
-  
-        li {
-  
-          a {
-            color: $light-text;  
+            .mobile-cart {
+                list-style-type: none;
+                padding-bottom: .4rem;
+                @include desktop{
+                    display: none;
+                } 
+            }
             
-            &:hover {
-              color: $menu-hover;
-              @include position(.1rem, none, none);
-            }
-  
-            &:active {
-              @include position(.2rem, none, none);
-              color:rgb(146, 146, 146);
-            }
-          }
-        }
-        
-        .highlighted {
-          a{
-              @include position(.1rem, none, none);
-              color: $menu-hover;
-              text-decoration: underline;
-          }       
-        }
-      }
-    }
-  
-    .menuMobile {
-      position: fixed;
-      transform: translateY(-100%);
-      transition: transform 0.2s;
-      display: block;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 99;
-      background: black;
-      color: white;
-      list-style: none;
-      padding-top: 5rem; 
-  
-      .menuItem {
-        display: block;
-        margin: 2rem 4rem;
-        font-size: 1.8rem;
-        color: white;
-        text-decoration: none;
-        border-bottom: solid 3px #ffffff;
-  
-        &:hover {
-          @include position(.1rem, none, none);
-        }
-      }
-    }
-  
-    .hamburger {
-      z-index: 100;
-      cursor: pointer;
-  
-      .bar1, .bar2, .bar3 {
-        width: 30px;
-        height: 3px;
-        background-color: rgb(255, 255, 255);
-        margin: 6px 0;
-        transition: all .6s ease;
-  
-        @include desktop{
-          display: none;
-        } 
-      }
-  
-      &:hover {
-  
-        .bar1 {
-          // @include position(none, .2rem, none);
-          transform: rotate(180deg);
-        }
-        .bar2 {
-          // @include position(none, .2rem, none);
-          transform: rotate(16deg);
-        }
-        .bar3 {
-          // @include position(none, .2rem, none);
-          transform: rotate(-180deg);
-        }
-      }
-    }
-  }
-  
-  // Change hamburger on click
-  .change {
-  
-    .hamburger {
-      .bar1 {
-        transform: translate(0, 11px) rotate(-45deg);
-      }
-      .bar2 {opacity: 0;}
+            // hamburger menu
+            .hamburger {
+                z-index: 3;
+                cursor: pointer;
     
-      .bar3 {
-        transform: translate(0, -11px) rotate(45deg);
-      }
+                .bar1, .bar2 {
+                    width: 16px;
+                    height: 1px;
+                    background-color: $burger-color;
+                    margin: 6px 0;
+                    transition: all .6s ease;
+    
+                    @include desktop{
+                    display: none;
+                    } 
+                }
+    
+                &:hover {
+    
+                    .bar1 {
+                        background-color: white;
+                        height: 1.2px;
+                    }
+                    .bar2 {
+                        background-color: white;
+                        height: 1.2px;
+                    }
+                }
+            }
+        }
+
+        // Hidden mobile menu (shows on burger click)
+        .menuMobile {
+            position: fixed;
+            transform: translateY(-100%);
+            transition: transform 1s;
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            background: rgb(0, 0, 0);
+            color: white;
+            list-style-type: none;
+            padding-top: 5rem; 
+
+            @include desktop{
+                display: none;
+            } 
+
+            .hidden-search {
+                width: 85%;
+                height: 3rem;
+                border: none;
+                border-radius: 1rem;
+                background-color: $hidden-searchfield;
+                padding-bottom: 1rem;
+                margin: .8rem 3rem;
+            }
+
+            // Links in the hidden dropdown menu
+            .menuItem {
+                display: block;
+                margin: .8rem 3rem;
+                font-size: 1.1rem;
+                padding-bottom: 1rem;
+                color: $menu-text;
+                text-decoration: none;
+                border-bottom: solid 1px $hidden-menu-border;
+
+                &:hover {
+                color: $menu-hover;
+                }
+            }
+        }
     }
-  }
-  
-  // Show menu
-  .showMenu {
-  
-    .menuMobile{
-      transform: translateY(0);
+
+    // Change hamburger on click
+    .change {
+
+        @keyframes bar1 {
+            0%   {transform: translate(0, 0px)}
+            25%  {transform: translate(0, 1.5px)}
+            50%  {transform: translate(0, 3px)}
+            100% {transform: translate(0, 3.2px) rotate(45deg)}
+        }
+
+        @keyframes bar2 {
+            0%   {transform: translate(0, 0px)}
+            25%  {transform: translate(0, -1.5px)}
+            50%  {transform: translate(0, -3px)}
+            100% {transform: translate(0, -3.2px) rotate(-45deg)}
+        }
+
+        .hamburger {
+            .bar1 {
+                animation-name: bar1;
+                animation-duration: .5s;
+                transform: translate(0, 3.5px) rotate(45deg)
+                
+            }
+            .bar2 {
+                animation-name: bar2;
+                animation-duration: .5s;
+                transform: translate(0, -3.5px) rotate(-45deg)
+            }
+        }
     }
-  }
-  
-  // Footer navigation
-  .footer-nav {
-  display: flex;
-  flex-direction: column;
-  
-    ul{
-      padding: 1rem;
+
+    // Show hidden hamburger dropdown menu
+    .showMenu {
+
+        .menuMobile{
+            transform: translateY(0);
+        }
+
+        @keyframes fade {
+            0%   {opacity: 100%; transform: translate(0, 0px)}
+            75% {opacity: 0%; transform: translate(0, 5px);}
+        }
+
+        .mobile-cart {
+            animation-name: fade;
+            animation-duration: .5s;
+            opacity: 0;
+            cursor:auto;
+        }
     }
-  
-  }
+
+    // Footer navigation
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+
+        ul{
+        padding: 1rem;
+        }
+    }
+}
