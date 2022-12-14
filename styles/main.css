@@ -658,14 +658,21 @@ footer .copyright a:hover {
 }
 .sections .section-four .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  gap: 0.1rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding-block: 0.1rem;
+  width: 40%;
+  margin-inline: auto;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
+.sections .section-four .grid-container .grid-item {
+  height: 100%;
+  width: 100%;
+}
 .sections .section-four .grid-container .grid-item .grid-img {
-  height: 20rem;
-  width: 20rem;
+  height: 100%;
+  width: 100%;
 }
 .sections .section-five {
   background-color: lightgray;

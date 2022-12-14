@@ -159,18 +159,20 @@ $border-bottom: solid 1px #ffffff0c;
             // width: 100%;
             // flex-direction: column;
             // column-count: 2;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 1fr);
+            // display: grid;
+            // grid-template-columns: repeat(5, 1fr);
+            // grid-template-rows: repeat(5, 1fr);
+            @include grid(2);
             grid-column-gap: 10px;
             grid-row-gap: 10px;
 
             .grid-item{
-
+                height: 100%;
+                width: 100%;
 
                 .grid-img{
-                    height: 20rem;
-                    width: 20rem;
+                    height: 100%;
+                    width: 100%;
                 }
             }
         }
