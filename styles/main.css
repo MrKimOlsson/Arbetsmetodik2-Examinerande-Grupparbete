@@ -190,10 +190,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: none;
   font-weight: lighter;
-  font-size: 1rem;
+  letter-spacing: normal;
   background-color: #f5f5f7;
   color: black;
 }
@@ -254,7 +252,7 @@ footer .footer-content .shop {
 }
 footer .footer-content .shop p {
   text-align: start;
-  font-size: 0.8rem;
+  font-size: 0.3rem;
   font-weight: 400;
 }
 footer .footer-content .shop a {
@@ -266,26 +264,26 @@ footer .footer-content .shop a {
 footer .footer-content .shop a:hover {
   text-decoration: underline;
 }
-footer .footer-content .copyright {
+footer .footer-content footer .copyright {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
   padding: 10px;
 }
-footer .footer-content .copyright p {
+footer .footer-content footer .copyright p {
   text-align: start;
-  font-size: 0.8rem;
+  font-size: 0.1rem;
   font-weight: 400;
 }
-footer .footer-content .copyright a {
+footer .footer-content footer .copyright a {
   font-size: 0.7rem;
   font-weight: 400;
   color: rgb(46, 46, 46);
   text-decoration: none;
   padding-left: 600px;
 }
-footer .footer-content .copyright a:hover {
+footer .footer-content footer .copyright a:hover {
   text-decoration: underline;
 }
 footer .legal-links {
@@ -294,16 +292,17 @@ footer .legal-links {
   justify-content: space-between;
   align-items: start;
   padding-bottom: 30px;
+  width: 100%;
 }
 footer .legal-links ul li {
   position: relative;
-  right: 110px;
+  left: 10px;
   display: inline;
   list-style: none;
 }
 footer .legal-links a {
   margin-right: 7px;
-  padding-right: 7px;
+  padding-right: 14px;
   margin-top: 10px;
   font-size: 0.7rem;
   font-weight: 600;
@@ -324,12 +323,18 @@ footer .legal-links a:hover {
   display: none;
 }
 
+.footer-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: none;
+}
 .footer-mobile .accordion {
-  display: inline-block;
+  display: block;
   background-color: transparent;
   color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 6px;
   width: 100%;
   text-align: left;
   border: none;
@@ -337,20 +342,102 @@ footer .legal-links a:hover {
   transition: 0.4s;
 }
 .footer-mobile .active, .footer-mobile .accordion:hover {
-  background-color: #ccc;
+  background-color: none;
+  color: rgb(0, 0, 0);
 }
 .footer-mobile .panel {
-  padding: 0 18px;
+  padding: 0 15px;
   width: 100%;
-  background-color: white;
+  background-color: #f5f5f7;
   display: none;
   overflow: hidden;
 }
 .footer-mobile li, .footer-mobile a {
   list-style: none;
   text-decoration: none;
-  font-weight: 300;
-  color: rgb(24, 24, 24);
+  font-weight: 400;
+  font-size: 0.7rem;
+  padding-top: 5px;
+  color: rgb(155, 155, 155);
+  text-decoration: none;
+}
+.footer-mobile a:hover {
+  text-decoration: underline;
+}
+
+.shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: block;
+  border-bottom: 1px solid black;
+}
+.shop p {
+  text-align: start;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.shop a {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(0, 102, 204);
+  text-decoration: none;
+}
+.shop a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px;
+}
+.copyright p {
+  text-align: start;
+  font-size: 0.6rem;
+  font-weight: 400;
+  width: 100%;
+}
+.copyright a {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgb(46, 46, 46);
+  text-decoration: none;
+  padding-left: 100px;
+}
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+.legal-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding-bottom: 30px;
+  width: 100%;
+}
+.legal-links ul li {
+  position: relative;
+  left: 10px;
+  display: inline;
+  list-style: none;
+}
+.legal-links a {
+  margin-right: 7px;
+  padding-right: 14px;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgb(46, 46, 46);
+  text-decoration: none;
+  border-right: 0.5px solid rgb(62, 62, 62);
+}
+.legal-links a:hover {
+  text-decoration: underline;
 }
 
 /* ____________________________________Grids____________________________________ */
