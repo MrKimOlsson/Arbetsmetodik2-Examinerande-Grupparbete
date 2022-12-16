@@ -319,14 +319,15 @@ footer .legal-links a:hover {
   display: none;
 }
 
-footer.footer-mobile {
+.footer-mobile {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: none;
+  border: 5px #444;
 }
 
-.accordion {
+.footer-mobile .accordion {
   display: block;
   background-color: transparent;
   color: #444;
@@ -336,7 +337,17 @@ footer.footer-mobile {
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
+}
+.footer-mobile .accordion .plus {
+  float: right;
+  font-size: 1rem;
+  margin-top: -4px;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+
+.rotatePlus .plus {
+  transform: rotate(45deg);
 }
 
 .active, .accordion:hover {
@@ -348,11 +359,11 @@ footer.footer-mobile {
   padding: 0 15px;
   width: 100%;
   background-color: #f5f5f7;
+  height: 0%;
   display: none;
-  overflow: hidden;
+  border-bottom: 5px #444;
 }
-
-li, a {
+.panel li, .panel a {
   list-style: none;
   text-decoration: none;
   font-weight: 400;
