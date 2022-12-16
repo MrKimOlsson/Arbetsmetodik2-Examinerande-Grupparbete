@@ -1,0 +1,46 @@
+
+/* ____________________________________Grids____________________________________ */
+.grid-one {
+    @include grid(1);
+}
+
+.grid-two {
+    @include grid(2);
+}
+
+.grid-three {
+    @include grid(3);
+}
+
+
+/* ____________________________________Card____________________________________ */
+.card {
+    @include flex(column, center, center); 
+    text-align: center;
+    background-color: $card-color;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #00000051;
+    padding: 30px 30px 60px 30px;
+    margin:2rem;
+    transition: .35s ease-in-out;
+
+    img {    
+        border-radius: 50%; 
+        height: 150px;
+        width: 150px;     
+    }
+    
+    p {    
+        padding: 20px 40px 0px 40px;
+        font-size:1.3rem;    
+    }
+    li { 
+        padding-top: 20px;   
+        font-size: 1.3rem;     
+    }
+    
+    a { 
+        padding-top: 30px;   
+        font-size: 1.3rem;     
+    }
+}

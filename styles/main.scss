@@ -1,0 +1,20 @@
+// Essentials
+@import "partials/general";
+@import "partials/links";
+@import "partials/mixins";
+// Layout
+@import "partials/colors";
+@import "partials/navigation";
+@import "partials/footer";
+// Content
+@import "partials/card";
+@import "partials/sections";
+@import "partials/content";
+@import "partials/slider";
+
+.d-none {
+    display: none;
+}
+
+
+

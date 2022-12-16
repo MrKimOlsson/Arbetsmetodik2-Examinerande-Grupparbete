@@ -1,0 +1,88 @@
+/* ____________________________________Mixins____________________________________ */
+
+// Flex
+@mixin flex($direction, $justify, $align) {
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// Grid
+@mixin grid($columns) {
+    display: grid;
+    gap: 1%;
+    column-gap: 1%;
+    grid-template-columns:
+    repeat($columns, 1fr);
+    padding-block: .1rem;
+    width: min(85%, 40%);
+    margin-inline: auto;
+}
+
+// Size
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// Position relative
+@mixin position($x, $y, $z) {
+    position: relative;
+    top: $x;
+    left: $y;
+    right: $z;
+}
+
+// Position absolute
+@mixin absolute($x, $y, $z) {
+    position: absolute;
+    top: $x;
+    left: $y;
+    right: $z;
+}
+
+// Position fixed
+@mixin fixed($x, $y, $z) {
+    position: fixed;
+    top: $x;
+    right: $y;
+    bottom: $z;
+}
+
+// Media Query
+$fold-width: 280px;
+$special-width: 390px;
+$tablet-width: 900px;
+$desktop-width: 1350px;
+
+@mixin fold {
+    @media (max-width: #{$fold-width}) {
+      @content;
+    }
+}
+
+@mixin special {
+    @media (max-width: #{$special-width}) {
+      @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+}
+
+@mixin landscape {
+    @media (orientation: landscape) {
+        @content;
+        
+    }
+}
