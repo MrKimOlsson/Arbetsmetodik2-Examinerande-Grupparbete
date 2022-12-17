@@ -131,24 +131,29 @@ footer {
 
 .footer-mobile {
     @include flex (column, center, none);
-    border: 5px #444;
 }
 
 .footer-mobile{
-    
+  
+// SÄNKTE WIDTH FRÅN 100 TILL 95%
 .accordion {
     display: block;
     background-color: transparent;
     color: #444;
     cursor: pointer;
     padding: 6px;
-    width: 100%;
+    width: 95%;
     text-align: left;
-    border: none;
-    outline: none;
+    margin-left: 1rem;
+
+    // TOG BORT BORDER:NONE
+    // LA TILL FÖLJADE:
+    border-bottom: solid 1px rgb(212, 212, 212);
+    border-top: none;
+    border-left: none;
+    border-right: none;
 
     .plus{
-        // display: inline-block;
         float: right;
         font-size: 1.0rem;
         margin-top: -4px;
@@ -158,7 +163,6 @@ footer {
     }
 }
 }
-
 
 .rotatePlus {
 
@@ -170,31 +174,26 @@ footer {
 .active, .accordion:hover {
     background-color: none;
     color: rgb(0, 0, 0);
-    
 }
 
+// JUSTERADE PADDING I PANEL OCH li, a
 .panel {
-    padding: 0 15px;
+    padding: 15px 35px;
     width: 100%;
     background-color: $footer-bg;
     height: 0%;
     display: none;
-    border-bottom: 5px#444;
   
-
     li, a{
         list-style: none; 
         text-decoration: none;
         font-weight: 400;
         font-size: .7rem;
-        padding-top: 5px;
+        padding: 5px 0px 5px;
         color: rgb(155, 155, 155);
         text-decoration: none;
-        }
-
+    }
 }
-
-
 
 a:hover{
 text-decoration: underline;
@@ -273,8 +272,3 @@ text-decoration: underline;
     }
 }
 
-
-
-// }    
-
-        // }
