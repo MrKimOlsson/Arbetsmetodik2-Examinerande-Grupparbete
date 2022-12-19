@@ -1,0 +1,31 @@
+
+.logo-list{
+    @include flex (row, center, none);   
+    padding-top: 50px; 
+        a{
+        @include flex (column, none, center);  
+        font-size: .8rem;
+         padding: 10px;
+         margin-bottom: 10px;
+         img{
+             padding: 1px;
+             height: 50px;
+             width: 80px;  
+         }
+         span{
+             @include flex(column, center, center);
+             font-size: .7rem;
+         }
+         .nyhet{
+             color: orangered;
+         }
+     }
+    }
+     section{
+        @include flex (column, center, center);
+        margin: 10px;
+        padding: 10px;
+       .jul{
+         text-align: center;
+       }  
+    }

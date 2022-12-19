@@ -310,104 +310,6 @@ header .footer-nav {
 header .footer-nav ul {
   padding: 1rem;
 }
-header .logo-list {
-  padding-top: 40px;
-}
-header .logo-list ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: none;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-header .logo-list ul li {
-  list-style: none;
-}
-header .logo-list ul img {
-  padding: 1px;
-  height: 50px;
-  width: 80px;
-}
-header .logo-list ul span {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.7rem;
-}
-header .logo-list ul .nyhet {
-  color: orangered;
-}
-header .logo-list p {
-  text-align: center;
-}
-
-Footer .logo-list {
-  padding-top: 40px;
-}
-Footer .logo-list ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: none;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-Footer .logo-list ul li {
-  list-style: none;
-}
-Footer .logo-list ul img {
-  padding: 1px;
-  height: 50px;
-  width: 80px;
-}
-Footer .logo-list ul span {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.7rem;
-}
-Footer .logo-list ul .nyhet {
-  color: orangered;
-}
-Footer .logo-list p {
-  text-align: center;
-}
-
-.logo-list {
-  padding-top: 40px;
-}
-.logo-list ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: none;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-.logo-list ul li {
-  list-style: none;
-}
-.logo-list ul img {
-  padding: 1px;
-  height: 50px;
-  width: 80px;
-}
-.logo-list ul span {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.7rem;
-}
-.logo-list ul .nyhet {
-  color: orangered;
-}
-.logo-list p {
-  text-align: center;
-}
 
 /* ____________________________________Footer____________________________________ */
 footer {
@@ -1098,6 +1000,50 @@ a:hover {
 
 .carousel__indicator.current-slide {
   background: rgba(0, 0, 0, 0.75);
+}
+
+.logo-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: none;
+  padding-top: 50px;
+}
+.logo-list a {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.logo-list a img {
+  padding: 1px;
+  height: 50px;
+  width: 80px;
+}
+.logo-list a span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+.logo-list a .nyhet {
+  color: orangered;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+section .jul {
+  text-align: center;
 }
 
 .d-none {
