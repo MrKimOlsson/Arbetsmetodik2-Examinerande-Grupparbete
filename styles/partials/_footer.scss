@@ -9,7 +9,25 @@ footer {
     // font-size: 1rem;
     background-color: $footer-bg;
     color: $footer-text;
-
+    
+    section{
+        @include flex (column, center, center);
+        padding: 10px;
+        ol{
+            margin: 20px;
+            padding: 20px;
+            // padding-left: 20px;
+            // padding-right: 20px;
+            border-bottom: 1px solid #444;
+            
+            text-align:start;
+            li{
+                width: 800px;
+                padding: 5px;
+                font-size: .8rem;
+            }
+        }
+    }
       
       
 
@@ -54,13 +72,18 @@ footer {
             text-decoration: underline;
         }
      } 
+        
+    .bottom{
+        @include flex (row, center, none);
         .shop{
             width: 1000px;
+            padding: 100px;
             @include flex(row, space-between, center);
             display: block;
             border-bottom: 1px solid black;
             p{
-            text-align: start;
+             
+            text-align: center;
             font-size: .3rem;
             font-weight: 400;
             }
@@ -74,6 +97,7 @@ footer {
                 text-decoration: underline;
             }
         }
+        
         footer .copyright{
             @include flex(row, space-between, start);
             padding: 10px;
@@ -118,6 +142,7 @@ footer {
                 text-decoration: underline;
             }
     }
+}
     .footer-mobile{
         @include desktop{
             display: none;
