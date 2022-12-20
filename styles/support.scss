@@ -1,0 +1,123 @@
+// Essentials
+@import "partials/general";
+@import "partials/links";
+@import "partials/mixins";
+// Layout
+@import "partials/colors";
+@import "partials/navigation";
+@import "partials/footer";
+
+.d-none {
+    display: none;
+}
+
+.welcome-img-one{
+    width: 100%;
+    // border: solid pink;
+    height: 25rem;
+}
+.text-place{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -400%);
+    color: white;
+    font-size: 40px;
+}
+.as-imagegrid{
+    padding-top: 50px;
+    display: flex;
+    height: 25rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.as-imagegrid-item{
+    display: flex;
+    flex-direction: column;
+    // height: 2rem;
+    width: 8rem;
+}
+.text-place-grid{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.grid-img{
+    height: 8rem;
+    width: 8rem;
+}
+
+.id-repair{
+    // width: 100rem;
+    display: flex;
+    justify-content: center;
+}
+.placement{
+    display: block;
+    // border: solid red;
+    width: 50%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-top: 1px solid #dedede;
+}
+.id-img{
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+}
+.img-center{
+    display: flex;
+    justify-content: center;
+    // flex-direction: column;
+}
+.search-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: #dedede 1px solid;
+    border-top: #dedede 1px solid;
+    padding: 2rem;
+}
+.search{
+    display: flex;
+    flex-direction: row-reverse;
+    // align-items: center;
+    // flex-direction: column;
+    // height: 8rem;
+}
+.input{
+    width: 25rem;
+    height: 3rem;
+}
+.button{
+    background-image: url(/img/Support/search_icon_black.svg);
+    width: 2rem;
+    height: 3rem;
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 30px;
+
+}
+
+.iphone{
+    height: 35rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3rem;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.img-iphone{
+    display: flex;
+    width: 35rem;
+    align-items: center;
+}
+.bröd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: x-large;
+}
