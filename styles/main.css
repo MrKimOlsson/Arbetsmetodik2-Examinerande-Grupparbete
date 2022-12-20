@@ -493,8 +493,9 @@ footer .footer-content .legal-links a {
 footer .footer-content .legal-links a:hover {
   text-decoration: underline;
 }
+
 @media (min-width: 1350px) {
-  footer .footer-mobile {
+  .footer-mobile {
     display: none;
   }
 }
