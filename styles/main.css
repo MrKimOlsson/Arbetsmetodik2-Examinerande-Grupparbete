@@ -728,8 +728,6 @@ a:hover {
 }
 .sections .section-two .img-wrap-two .content {
   display: flex;
-  position: absolute;
-  top: 0;
   justify-content: center;
   flex-direction: column;
 }
