@@ -9,25 +9,26 @@ footer {
     // font-size: 1rem;
     background-color: $footer-bg;
     color: $footer-text;
-
-section{
-    @include flex (column, center, center);
-    padding: 10px;
-    ol{
-        margin: 20px;
-        padding: 20px;
-        // padding-left: 20px;
-        // padding-right: 20px;
-        border-bottom: 1px solid #444;
-        
-        text-align:start;
-        li{
-            width: 800px;
-            padding: 5px;
-            font-size: .8rem;
+    
+    section{
+        @include flex (column, center, center);
+        padding: 10px;
+        ol{
+            margin: 20px;
+            padding: 20px;
+            // padding-left: 20px;
+            // padding-right: 20px;
+            border-bottom: 1px solid #444;
+            
+            text-align:start;
+            li{
+                width: 800px;
+                padding: 5px;
+                font-size: .8rem;
+            }
         }
     }
-}
+      
       
 
     .footer-menu {
@@ -71,7 +72,8 @@ section{
             text-decoration: underline;
         }
      } 
-     .bottom{
+        
+    .bottom{
         @include flex (row, center, none);
         .shop{
             width: 1000px;
@@ -146,7 +148,7 @@ section{
             display: none;
         }
     }
-}     
+    
 //Footer - Mobil
 .footer-content{
     display: none;        
