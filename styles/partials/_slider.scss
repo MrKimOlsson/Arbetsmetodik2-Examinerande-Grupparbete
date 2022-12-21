@@ -1,21 +1,5 @@
 $animationSpeed: 40s;
 
-// Animation
-// @keyframes scroll {
-// 	0% { transform: translateX(0); }
-//     5% { transform: translateX(-1160px)}
-//     10% { transform: translateX(-1160px)}
-//     15% { transform: translateX(-1160px * 2)}
-//     20% { transform: translateX(-1160px * 2)}
-//     25% { transform: translateX(-1160px * 3)}
-//     30% { transform: translateX(-1160px * 3)}
-//     35% { transform: translateX(-1160px * 4)}
-//     40% { transform: translateX(-1160px * 4)}
-//     45% { transform: translateX(-1160px * 5)}
-//     50% { transform: translateX(-1160px * 5)}
-
-// }
-
 // Image carousel slider
 .carousel {
     position: relative;
@@ -29,27 +13,19 @@ $animationSpeed: 40s;
 // container for the image slide track
 .carousel_track-container {
     height: 100%;
-    width: 100%;
-    // display: flex;
-    // justify-content: center;
-    // justify-items: center;
-    // align-items: center;
-    
+    width: 100%;    
 }
 
 // Track for the image slide
 .carousel__track {
     height: 100%;
-    // width: 50vw;
     list-style: none;
     position: relative;
-    // left: 380px;
     left: 15vw;
     transition: transform .5s ease;
     animation: scroll $animationSpeed linear infinite;
     width: calc(50vw * 20);
 }
-
 
 // With of slide will be calculated by JS to determin how far the images should slide.
 // All slides will be transparent to fade the images on the sides.
@@ -60,12 +36,11 @@ $animationSpeed: 40s;
     opacity: 30%;
     transition: .6s ease-in-out;
     animation-name: scroll;
-    
 }
 
 // The active slide image will transform to 100% opacity.
 .current-slide {
-    opacity: 100%;
+    opacity: 100%;   
     // position: relative;
     // left: 50%;
     
@@ -121,49 +96,3 @@ $animationSpeed: 40s;
 .carousel__indicator.current-slide {
     background: rgba(0,0,0,.75);
 }
-
-
-// Old code
-
-// .carousel {
-
-//     @include flex (column, center, center);
-//     align-items: center;
-//     position: relative;
-//     height: 388px;
-//     width: 100%;
-//     margin: 0 auto;
-//     overflow: hidden;
-// }
-
-// .carousel_track-container {
-//     background-color: rgb(21, 199, 21);
-//     height: 100%;
-//     width: 100%;
-//     text-align: center;
-// }
-
-// .carousel__track {
-//     display: flex;
-//     flex-direction: row;
-//     width: 100%;
-//     height: 100%;
-//     background-color: aqua;
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-//     overflow: hidden;
-// }
-
-// .carousel__slide {
-//     top: 0;
-//     bottom: 0;
-//     width: 100%;
-
-// }
-
-
-// .carousel__image {
-//     height: 100%;
-//     object-fit: cover;
-// }

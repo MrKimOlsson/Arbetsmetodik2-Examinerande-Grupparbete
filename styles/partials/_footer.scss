@@ -2,11 +2,8 @@
 
 //Footer Desktop
 footer {
-    // @include flex(column, center, center);
-    // @include size(100%, none);
     font-weight: lighter;
     letter-spacing: normal;
-    // font-size: 1rem;
     background-color: $footer-bg;
     color: $footer-text;
     
@@ -16,10 +13,7 @@ footer {
         ol{
             margin: 20px;
             padding: 20px;
-            // padding-left: 20px;
-            // padding-right: 20px;
             border-bottom: 1px solid #444;
-            
             text-align:start;
             li{
                 width: 800px;
