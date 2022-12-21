@@ -11,10 +11,21 @@ html {
 
 body {
   background: white;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background-color: #fff;
+  color: #1d1d1f;
+  font-style: normal;
 }
 
 /* ____________________________________Basic tags____________________________________ */
+p {
+  font-size: 12px;
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -910,11 +921,13 @@ a:hover {
 
 .carousel__track {
   height: 100%;
-  width: 50vw;
   list-style: none;
   position: relative;
   left: 15vw;
   transition: transform 0.5s ease;
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  width: 1000vw;
 }
 
 .carousel__slide {
@@ -923,6 +936,8 @@ a:hover {
   height: 100%;
   opacity: 30%;
   transition: 0.6s ease-in-out;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
 }
 
 .current-slide {

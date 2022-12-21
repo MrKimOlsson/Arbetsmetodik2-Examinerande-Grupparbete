@@ -1,3 +1,20 @@
+$animationSpeed: 40s;
+
+// Animation
+// @keyframes scroll {
+// 	0% { transform: translateX(0); }
+//     5% { transform: translateX(-1160px)}
+//     10% { transform: translateX(-1160px)}
+//     15% { transform: translateX(-1160px * 2)}
+//     20% { transform: translateX(-1160px * 2)}
+//     25% { transform: translateX(-1160px * 3)}
+//     30% { transform: translateX(-1160px * 3)}
+//     35% { transform: translateX(-1160px * 4)}
+//     40% { transform: translateX(-1160px * 4)}
+//     45% { transform: translateX(-1160px * 5)}
+//     50% { transform: translateX(-1160px * 5)}
+
+// }
 
 // Image carousel slider
 .carousel {
@@ -23,12 +40,14 @@
 // Track for the image slide
 .carousel__track {
     height: 100%;
-    width: 50vw;
+    // width: 50vw;
     list-style: none;
     position: relative;
     // left: 380px;
     left: 15vw;
     transition: transform .5s ease;
+    animation: scroll $animationSpeed linear infinite;
+    width: calc(50vw * 20);
 }
 
 
@@ -40,12 +59,16 @@
     height: 100%;
     opacity: 30%;
     transition: .6s ease-in-out;
+    animation-name: scroll;
     
 }
 
 // The active slide image will transform to 100% opacity.
 .current-slide {
     opacity: 100%;
+    // position: relative;
+    // left: 50%;
+    
 }
 
 // Image
