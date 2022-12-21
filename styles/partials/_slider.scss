@@ -82,6 +82,7 @@ $animationSpeed: 40s;
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    cursor: pointer;
 }
 
 .carousel__indicator {
@@ -92,7 +93,7 @@ $animationSpeed: 40s;
     background: rgba(0,0,0,.3);
     margin: 0 12px;
     cursor: pointer;
-
+    caret-color: transparent;
 }
 
 .carousel__indicator.current-slide {
