@@ -143,13 +143,13 @@ footer {
             }
     }
 }
-}
+
     .footer-mobile{
         @include desktop{
             display: none;
         }
     }
-    
+}    
 //Footer - Mobil
 .footer-content{
     display: none;        
