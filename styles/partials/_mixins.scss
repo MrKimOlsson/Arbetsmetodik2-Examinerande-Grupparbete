@@ -52,12 +52,19 @@
 
 // Media Query
 $fold-width: 280px;
+$xiomi-width: 335px;
 $special-width: 390px;
 $tablet-width: 900px;
 $desktop-width: 1350px;
 
 @mixin fold {
     @media (max-width: #{$fold-width}) {
+      @content;
+    }
+}
+
+@mixin xiomi {
+    @media (max-width: #{$special-width}) {
       @content;
     }
 }

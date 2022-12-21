@@ -1,3 +1,4 @@
+$animationSpeed: 40s;
 
 // Image carousel slider
 .carousel {
@@ -12,25 +13,21 @@
 // container for the image slide track
 .carousel_track-container {
     height: 100%;
-    width: 100%;
-    // display: flex;
-    // justify-content: center;
-    // justify-items: center;
-    // align-items: center;
-    
+    width: 100%;    
 }
 
 // Track for the image slide
 .carousel__track {
     height: 100%;
-    width: 50vw;
     list-style: none;
     position: relative;
-    // left: 380px;
-    left: 15vw;
+    // left: 15vw;
     transition: transform .5s ease;
-}
+    animation: scroll $animationSpeed linear infinite;
+    width: calc(50vw * 20);
 
+    
+}
 
 // With of slide will be calculated by JS to determin how far the images should slide.
 // All slides will be transparent to fade the images on the sides.
@@ -40,16 +37,19 @@
     height: 100%;
     opacity: 30%;
     transition: .6s ease-in-out;
-    
+    animation-name: scroll;
 }
 
 // The active slide image will transform to 100% opacity.
 .current-slide {
-    opacity: 100%;
+    opacity: 100%;   
 }
 
 // Image
 .carousel__image {
+    justify-content: center;
+    align-items: center;
+
     height: 100%;
     object-fit: cover;  
 }
@@ -82,6 +82,7 @@
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    cursor: pointer;
 }
 
 .carousel__indicator {
@@ -92,55 +93,9 @@
     background: rgba(0,0,0,.3);
     margin: 0 12px;
     cursor: pointer;
-
+    caret-color: transparent;
 }
 
 .carousel__indicator.current-slide {
     background: rgba(0,0,0,.75);
 }
-
-
-// Old code
-
-// .carousel {
-
-//     @include flex (column, center, center);
-//     align-items: center;
-//     position: relative;
-//     height: 388px;
-//     width: 100%;
-//     margin: 0 auto;
-//     overflow: hidden;
-// }
-
-// .carousel_track-container {
-//     background-color: rgb(21, 199, 21);
-//     height: 100%;
-//     width: 100%;
-//     text-align: center;
-// }
-
-// .carousel__track {
-//     display: flex;
-//     flex-direction: row;
-//     width: 100%;
-//     height: 100%;
-//     background-color: aqua;
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-//     overflow: hidden;
-// }
-
-// .carousel__slide {
-//     top: 0;
-//     bottom: 0;
-//     width: 100%;
-
-// }
-
-
-// .carousel__image {
-//     height: 100%;
-//     object-fit: cover;
-// }

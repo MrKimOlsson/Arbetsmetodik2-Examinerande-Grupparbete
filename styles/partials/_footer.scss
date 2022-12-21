@@ -2,11 +2,8 @@
 
 //Footer Desktop
 footer {
-    // @include flex(column, center, center);
-    // @include size(100%, none);
     font-weight: lighter;
     letter-spacing: normal;
-    // font-size: 1rem;
     background-color: $footer-bg;
     color: $footer-text;
     
@@ -16,10 +13,7 @@ footer {
         ol{
             margin: 20px;
             padding: 20px;
-            // padding-left: 20px;
-            // padding-right: 20px;
             border-bottom: 1px solid #444;
-            
             text-align:start;
             li{
                 width: 800px;
@@ -28,7 +22,6 @@ footer {
             }
         }
     }
-      
       
 
     .footer-menu {
@@ -52,6 +45,7 @@ footer {
         .column{
             padding-left: 25px;
             padding-right: 25px;
+            padding-bottom: 25px;
         }
         h3{
             font-size: .7rem;
@@ -99,7 +93,7 @@ footer {
         }
         
         footer .copyright{
-            @include flex(row, space-between, start);
+            @include flex(row, space-between, flex-start);
             padding: 10px;
             p{
             text-align: start;
@@ -119,7 +113,7 @@ footer {
         }
         }
         .legal-links{
-            @include flex(row, space-between, start);
+            @include flex(row, space-between, flex-start);
             padding-bottom: 30px;
             width: 100%;
             ul li {
@@ -249,7 +243,7 @@ text-decoration: underline;
 }
 
 .copyright{
-    @include flex(row, space-between, start);
+    @include flex(row, space-between, flex-start);
     padding: 10px;
     p{
     text-align: start;
@@ -272,7 +266,7 @@ text-decoration: underline;
 }
 
 .legal-links{
-    @include flex(row, space-between, start);
+    @include flex(row, space-between, flex-start);
     padding-bottom: 30px;
     width: 100%;
     ul li {
