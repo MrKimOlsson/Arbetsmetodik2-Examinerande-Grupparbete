@@ -21,10 +21,12 @@ $animationSpeed: 40s;
     height: 100%;
     list-style: none;
     position: relative;
-    left: 15vw;
+    // left: 15vw;
     transition: transform .5s ease;
     animation: scroll $animationSpeed linear infinite;
     width: calc(50vw * 20);
+
+    
 }
 
 // With of slide will be calculated by JS to determin how far the images should slide.
@@ -41,13 +43,13 @@ $animationSpeed: 40s;
 // The active slide image will transform to 100% opacity.
 .current-slide {
     opacity: 100%;   
-    // position: relative;
-    // left: 50%;
-    
 }
 
 // Image
 .carousel__image {
+    justify-content: center;
+    align-items: center;
+
     height: 100%;
     object-fit: cover;  
 }

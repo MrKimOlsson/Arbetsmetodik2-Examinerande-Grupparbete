@@ -20,6 +20,7 @@
   let lastSlide = slides[9];  
   let firstSlide = slides[0];
   let restart = false;
+  let backToEnd = false;
   
   const setSlidePosition = () => {
   
@@ -32,7 +33,7 @@
     slides[6].style.left = slideWidth * 6 + 'px';
     slides[7].style.left = slideWidth * 7 + 'px';
     slides[8].style.left = slideWidth * 8 + 'px';
-  
+    slides[9].style.left = slideWidth * 9 + 'px';
   
   }
   console.log(slideNumber);
@@ -50,6 +51,14 @@
       console.log("restart");
       restart = false;
     }
+
+    else if(backToEnd) {
+        lastSlide.classList.add('current-slide');
+        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+      console.log("back to end");
+      backToEnd = false;
+    }
+
   
     else if(nextSlide == lastSlide){
       console.log("next slide = last");
@@ -96,9 +105,22 @@
     let prevSlide = currentSlide.previousElementSibling;
     const currentDot = dotsNav.querySelector('.current-slide');
     const prevDot = currentDot.previousElementSibling;
+
+    if(backToEnd){
+        nextSlide.classList.add('lastSlide');
+        currentSlide.classList.remove('.current-slide');
+        // firstDot.classList.add('.current-slide');
+        track.style.transform = 'translateX(+' + nextSlide.style.left + ')';
+        // restart = false;
+        moveToSlide(track, currentSlide, nextSlide);
+        // updateDots(currentDot, firstDot);
+      }
+      else {
+        moveToSlide(track, currentSlide, prevSlide);
+        updateDots(currentDot, prevDot);
+      }
     
-    moveToSlide(track, currentSlide, prevSlide);
-    updateDots(currentDot, prevDot);
+    
   })
   
   // On click right, move slide to the right

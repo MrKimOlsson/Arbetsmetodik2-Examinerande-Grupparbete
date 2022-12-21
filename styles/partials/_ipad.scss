@@ -2,8 +2,6 @@ body{
     background-color: #fff
 }
 
-
-
 .logo-list{
     @include flex (row, center, none);   
     padding-top: 50px; 
@@ -110,10 +108,7 @@ body{
         bottom: 130px;
         left: 80px;
     }
-    
     }
-    
-   
     
 }
 

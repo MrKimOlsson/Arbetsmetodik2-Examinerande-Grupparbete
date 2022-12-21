@@ -23,7 +23,6 @@ footer {
         }
     }
       
-      
 
     .footer-menu {
         @include flex(row, space-around, center);
@@ -46,6 +45,7 @@ footer {
         .column{
             padding-left: 25px;
             padding-right: 25px;
+            padding-bottom: 25px;
         }
         h3{
             font-size: .7rem;
@@ -93,7 +93,7 @@ footer {
         }
         
         footer .copyright{
-            @include flex(row, space-between, start);
+            @include flex(row, space-between, flex-start);
             padding: 10px;
             p{
             text-align: start;
@@ -113,7 +113,7 @@ footer {
         }
         }
         .legal-links{
-            @include flex(row, space-between, start);
+            @include flex(row, space-between, flex-start);
             padding-bottom: 30px;
             width: 100%;
             ul li {
@@ -243,7 +243,7 @@ text-decoration: underline;
 }
 
 .copyright{
-    @include flex(row, space-between, start);
+    @include flex(row, space-between, flex-start);
     padding: 10px;
     p{
     text-align: start;
@@ -266,7 +266,7 @@ text-decoration: underline;
 }
 
 .legal-links{
-    @include flex(row, space-between, start);
+    @include flex(row, space-between, flex-start);
     padding-bottom: 30px;
     width: 100%;
     ul li {
