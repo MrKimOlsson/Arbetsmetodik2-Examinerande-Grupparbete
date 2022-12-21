@@ -109,11 +109,8 @@
     if(backToEnd){
         nextSlide.classList.add('lastSlide');
         currentSlide.classList.remove('.current-slide');
-        // firstDot.classList.add('.current-slide');
         track.style.transform = 'translateX(+' + nextSlide.style.left + ')';
-        // restart = false;
         moveToSlide(track, currentSlide, nextSlide);
-        // updateDots(currentDot, firstDot);
       }
       else {
         moveToSlide(track, currentSlide, prevSlide);
@@ -133,11 +130,8 @@
     if(restart){
       nextSlide.classList.add('firstSlide');
       currentSlide.classList.remove('.current-slide');
-      // firstDot.classList.add('.current-slide');
       track.style.transform = 'translateX(+' + nextSlide.style.left + ')';
-      // restart = false;
       moveToSlide(track, currentSlide, nextSlide);
-      // updateDots(currentDot, firstDot);
     }
     else {
       const nextSlide = currentSlide.nextElementSibling;
